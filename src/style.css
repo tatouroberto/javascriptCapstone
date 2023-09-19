@@ -1,6 +1,9 @@
 * {
   font-family: 'roboto', 'mooli', Arial, sans-serif;
 }
+body{
+  background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+}
 
 .nav,
 footer {
@@ -9,6 +12,9 @@ footer {
   justify-content: space-between;
   border: 1px solid #d3d3d3;
   padding: 0 2.1rem;
+}
+i.fa-solid.fa-film{
+  background-color: white;
 }
 
 footer {
