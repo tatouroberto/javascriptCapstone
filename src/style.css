@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(98.3deg, rgb(0, 0, 0) 10.6%, rgb(255, 0, 0) 97.7%);
+  background: white;
 }
 
 .nav,
@@ -21,4 +21,18 @@ i.fa-solid.fa-film {
 
 footer {
   font-style: italic;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
 }
