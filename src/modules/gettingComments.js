@@ -1,4 +1,4 @@
-import { addnewComent } from './comments.js';
+import { addnewComent } from './ourComments.js';
 
 const newComment = (id, name, msg) => {
   if (name.value !== '' && msg.value !== '') {

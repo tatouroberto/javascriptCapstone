@@ -1,71 +1,63 @@
 const addComment = (id, name, msg) => {
-    if (name.value !== '' && msg.value !== '') {
-      // eslint-disable-next-line no-use-before-define
-      addnewComent(id, name.value, msg.value);
-      name.value = '';
-      msg.value = '';
-    }
-  };
-  
-  const formComment = (newcommetId, node) => {
-    const commentTitle = document.createElement('div');
-    commentTitle.classList.add('form-container');
-    commentTitle.innerHTML = '<h4> Add a Comment </h4>';
-    const form = document.createElement('form');
-    form.classList.add('form-content');
-    form.innerHTML = `<input type="text" class="username" placeholder="Your name" required >
+  if (name.value !== '' && msg.value !== '') {
+    // eslint-disable-next-line no-use-before-define
+    addnewComent(id, name.value, msg.value);
+    name.value = '';
+    msg.value = '';
+  }
+};
+
+const formComment = (newcommetId, node) => {
+  const commentTitle = document.createElement('div');
+  commentTitle.classList.add('form-container');
+  commentTitle.innerHTML = '<h4> Add a Comment </h4>';
+  const form = document.createElement('form');
+  form.classList.add('form-content');
+  form.innerHTML = `<input type="text" class="username" placeholder="Your name" required >
      <textarea class="msg" name="msg" id="" cols="20" rows="6" placeholder="Your Comment" required ></textarea>
      <button class="btncomment" type="button">Comment</button>`;
-    const btncomment = form.querySelector('.btncomment');
-    const username = form.querySelector('.username');
-    const msg = form.querySelector('.msg');
-    btncomment.addEventListener('click', (e) => {
-      e.preventDefault();
-      addComment(newcommetId, username, msg);
-    });
-    commentTitle.appendChild(form);
-    node.appendChild(commentTitle);
-  };
-  
-  
-  
-  // function to Display comments given for a single item
-  const showComment = (data, node) => {
-    node.innerHTML = '';
-    const head = document.createElement('h4');
-    head.innerHTML = `Comments (${counter(data)})`;
-    node.appendChild(head);
-    const commentitem = document.createElement('div');
-    commentitem.classList.add('comment-items');
-    if (!data.error) {
-      data.forEach((element) => {
-        const item = document.createElement('p');
-        item.innerHTML = `<span>${element.creation_date} ${element.username}: ${element.comment}</span>`;
-        commentitem.appendChild(item);
-      });
-    }
-    node.appendChild(commentitem);
-  };
-  
+  const btncomment = form.querySelector('.btncomment');
+  const username = form.querySelector('.username');
+  const msg = form.querySelector('.msg');
+  btncomment.addEventListener('click', (e) => {
+    e.preventDefault();
+    addComment(newcommetId, username, msg);
+  });
+  commentTitle.appendChild(form);
+  node.appendChild(commentTitle);
+};
 
-  
-  const addnewComent = async (id, name, msg) => {
-    const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sW84L8HHl7QgRfLX5BO5/comments';
-    const request = new Request(url);
-    await fetch(request, {
-      method: 'POST',
-      body: JSON.stringify({ item_id: id, username: name, comment: msg }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+// function to Display comments given for a single item
+const showComment = (data, node) => {
+  node.innerHTML = '';
+  const commentitem = document.createElement('div');
+  commentitem.classList.add('comment-items');
+  if (!data.error) {
+    data.forEach((element) => {
+      const item = document.createElement('p');
+      item.innerHTML = `<span>${element.creation_date} ${element.username}: ${element.comment}</span>`;
+      commentitem.appendChild(item);
     });
-  
-    const arr = await getAddedComments(id);
-    const dataCard = document.querySelector('.comments-container');
-  
-    showComment(arr, dataCard);
-  };
-  
-  module.exports = {
-     formComment, showComment, getAddedComments,
-  };
+  }
+  node.appendChild(commentitem);
+};
+
+const addnewComent = async (id, name, msg) => {
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sW84L8HHl7QgRfLX5BO5/comments';
+  const request = new Request(url);
+  await fetch(request, {
+    method: 'POST',
+    body: JSON.stringify({ item_id: id, username: name, comment: msg }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  const dataCard = document.querySelector('.comments-container');
+
+  showComment(dataCard);
+};
+
+module.exports = {
+  formComment, showComment,
+};
