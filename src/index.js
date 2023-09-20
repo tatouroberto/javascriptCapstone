@@ -1,41 +1,21 @@
 import './style.css';
+import getLike from './modules/gettingLikes.js';
+import postLike from './modules/postingLikes.js';
+import homePage from './modules/home.js';
+import getMovie from './modules/gettingMovies.js';
 
-class Movies {
-  constructor() {
-    this.url = 'https://api.tvmaze.com/shows';
-    this.movies = JSON.parse(localStorage.getItem('movies')) || [];
-  }
-
-  fetchApi = async () => {
-    const req = new Request(this.url);
-    const res = await fetch(req);
-    const result = await res.json();
-    this.movies = result
-      .slice(7, 15)
-      .map(({ id, name, image }) => ({ id, name, image }));
-    return this.movies;
-  };
-
-  displayMovies = async () => {
-    const moviesList = document.querySelector('.movies');
-    moviesList.innerHTML = '';
-    this.movies.forEach((item) => {
-      const li = document.createElement('li');
-      li.innerHTML = ` <img src="${item.image.medium}" alt="" srcset="">
-     <div>
-     <h3>${item.name}</h3>
-     <div class="flex">
-     <span> Likes <i class="fa-solid fa-heart"></i></span>
-    <span> Comments  <i class="fa-solid fa-comment"></i></span>
-   </div>
-   </div>`;
-      moviesList.appendChild(li);
+const addEvents = () => {
+  const likeIcon = document.querySelectorAll('.fa-heart');
+  likeIcon.forEach((element) => {
+    element.addEventListener('click', () => {
+      postLike(element.dataset.id);
     });
-  };
-}
+  });
+};
 
-const movies = new Movies();
-
-movies.fetchApi().then(() => {
-  movies.displayMovies();
+window.addEventListener('load', async () => {
+  const shows = await getMovie();
+  homePage(shows);
+  addEvents();
+  getLike();
 });
