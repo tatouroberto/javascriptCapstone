@@ -36,3 +36,12 @@ ul {
   gap: 5rem;
   flex-wrap: wrap;
 }
+.popup-display {
+  justify-content: space-around;
+  align-items: start;
+  margin: 20px auto;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  width: 80%;
+}
