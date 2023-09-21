@@ -46,3 +46,21 @@ ul {
   color: #fff;
   width: 80%;
 }
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-content input,
+.form-content textarea {
+  padding: 5px;
+  border-radius: 8px;
+  border: 0.3px solid #000;
+}
+
+.form-content input:hover,
+.form-content textarea:hover {
+  border: 0.5px solid #00968859;
+}
