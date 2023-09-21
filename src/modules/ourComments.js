@@ -30,6 +30,7 @@ const formComment = (newcommetId, node) => {
 // function to Display comments given for a single item
 const showComment = (data, node) => {
   node.innerHTML = '';
+
   const commentitem = document.createElement('div');
   commentitem.classList.add('comment-items');
   if (!data.error) {
@@ -41,9 +42,8 @@ const showComment = (data, node) => {
   }
   node.appendChild(commentitem);
 };
-
 const addnewComent = async (id, name, msg) => {
-  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sW84L8HHl7QgRfLX5BO5/comments';
+  const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Z6mlbf0VYcyGDmGWWyyR/comments';
   const request = new Request(url);
   await fetch(request, {
     method: 'POST',
@@ -53,9 +53,10 @@ const addnewComent = async (id, name, msg) => {
     },
   });
 
-  const dataCard = document.querySelector('.comments-container');
+  // const arr = await getAddedComments(id);
+  // const dataCard = document.querySelector('.comments-container');
 
-  showComment(dataCard);
+  // showComment(arr, dataCard);
 };
 
 module.exports = {
