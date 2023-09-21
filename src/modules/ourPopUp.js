@@ -1,21 +1,21 @@
 import {
-    formComment, showComment, getAddedComments
-  } from './ourComments.js';
-  
-  const popupContainer = document.querySelector('.popup-display');
-  
-  const renderPopup = async (
-    id,
-    image,
-    name,
-    language,
-    genres,
-    rating,
-    schedule,
-  ) => {
-    popupContainer.innerHTML = '';
-  
-    popupContainer.innerHTML += `
+  formComment,
+} from './ourComments.js';
+
+const popupContainer = document.querySelector('.popup-display');
+
+const renderPopup = async (
+  id,
+  image,
+  name,
+  language,
+  genres,
+  rating,
+  schedule,
+) => {
+  popupContainer.innerHTML = '';
+
+  popupContainer.innerHTML += `
      <div class="show-${id} movie-img-sect">
        <div class="close-icon">X</div>
        <img src=${image.original} alt="" class="movie-img" />
@@ -29,9 +29,9 @@ import {
        <p class="padd" >Schedule: ${schedule.time} on ${schedule.days}s</p>
        <div class="comments-container"></div
    `;
-  
-    const commentsContainer = document.querySelector('.movie-features .comments-container');
-    formComment(id, commentsContainer);
-  };
-  
-  export default renderPopup;
+
+  const commentsContainer = document.querySelector('.movie-features .comments-container');
+  formComment(id, commentsContainer);
+};
+
+export default renderPopup;
