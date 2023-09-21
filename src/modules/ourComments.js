@@ -1,5 +1,3 @@
-import counter from './countComments.js';
-
 const addComment = (id, name, msg) => {
   if (name.value !== '' && msg.value !== '') {
     // eslint-disable-next-line no-use-before-define
@@ -30,7 +28,13 @@ const formComment = (newcommetId, node) => {
 };
 
 // counter for number of comments for a single item
-
+const counter = (comment) => {
+  let counter = comment.length;
+  if (comment.error) {
+    counter = 0;
+  }
+  return counter;
+};
 
 // function to Display comments given for a single item
 const showComment = (data, node) => {
@@ -80,5 +84,5 @@ const addnewComent = async (id, name, msg) => {
 };
 
 module.exports = {
-  formComment, showComment, getAddedComments,
+  counter, formComment, showComment, getAddedComments,
 };
