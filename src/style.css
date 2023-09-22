@@ -42,9 +42,13 @@ ul {
   align-items: start;
   margin: 20px auto;
   padding: 0;
-  background-color: #000;
+  background-color: #f1f1f1;
   color: #fff;
-  width: 80%;
+  width: 50%;
+}
+.movie-img{
+  width: 400px;
+  height: auto;
 }
 
 .form-content {
@@ -109,4 +113,27 @@ li > a:hover {
 
 footer p {
   font-size: 20px;
+}
+p.padd, h3.padd.movie-info, h4{
+  color: black;
+}
+h2.movie-popup-title{
+  color: black;
+}
+.close-icon{
+  color: black;
+  display: block;
+  position: absolute;
+  right: 300px;
+  top: 78px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 50%;
+  width: 20px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+div.comments-items{
+  color: black;
 }
