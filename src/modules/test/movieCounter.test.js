@@ -1,4 +1,3 @@
-
 import movieCounter from '../countMovies.js';
 
 describe('movieCounter', () => {
