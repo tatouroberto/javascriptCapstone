@@ -16,7 +16,7 @@ footer {
 }
 
 i.fa-solid.fa-film {
-  background-color: white;
+  background-color: transparent !important;
 }
 
 footer {
@@ -91,25 +91,20 @@ li > a:hover {
   font-size: large;
 }
 
-
 .fa-clapperboard,
 .fa-heart {
   padding-right: 10px;
 }
 
-.fa-regular, .far {
+.fa-regular,
+.far {
   font-weight: 400;
   padding-left: 10px;
 }
 
- .movie-icon {
+.movie-icon {
   font-size: 2rem;
   background-color: transparent;
-
-}
-
-i.fa-solid.fa-film {
-  background-color: transparent !important;
 }
 
 footer p {
