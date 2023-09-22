@@ -3,14 +3,14 @@
 }
 
 body {
-  background: white;
+  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
 }
 
 .nav,
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 40%;
   border: 1px solid #d3d3d3;
   padding: 0 2.1rem;
 }
@@ -63,4 +63,55 @@ ul {
 .form-content input:hover,
 .form-content textarea:hover {
   border: 0.5px solid #00968859;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  width: 80px;
+  border: none;
+  background: none;
+  background-color: #02282b;
+  padding: 5px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+li > a {
+  text-decoration: none;
+  color: #0e0202;
+  list-style: none;
+}
+
+li > a:hover {
+  font-size: large;
+}
+
+
+.fa-clapperboard,
+.fa-heart {
+  padding-right: 10px;
+}
+
+.fa-regular, .far {
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+ .movie-icon {
+  font-size: 2rem;
+  background-color: transparent;
+
+}
+
+i.fa-solid.fa-film {
+  background-color: transparent !important;
+}
+
+footer p {
+  font-size: 20px;
 }
