@@ -74,7 +74,7 @@ then we can like movies and see the total likes.
 
 - [Live Demo Link](https://tatouroberto.github.io/javascriptCapstone/dist/index.html)
 
- - [Project presentation]()
+ - [Project presentation](https://www.loom.com/share/c1964d6479714d478ee9c0c429a01e8d)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
