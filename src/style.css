@@ -46,7 +46,8 @@ ul {
   color: #fff;
   width: 50%;
 }
-.movie-img{
+
+.movie-img {
   width: 400px;
   height: auto;
 }
@@ -114,13 +115,18 @@ li > a:hover {
 footer p {
   font-size: 20px;
 }
-p.padd, h3.padd.movie-info, h4{
+
+p.padd,
+h3.padd.movie-info,
+h4 {
   color: black;
 }
-h2.movie-popup-title{
+
+h2.movie-popup-title {
   color: black;
 }
-.close-icon{
+
+.close-icon {
   color: black;
   display: block;
   position: absolute;
@@ -134,6 +140,7 @@ h2.movie-popup-title{
   text-align: center;
   margin: 0 auto;
 }
+
 .display-comments {
   color: black;
 }
