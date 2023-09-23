@@ -82,6 +82,8 @@ li > a:hover {
 
 .fa-heart {
   color: #ef3d01;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .fa-regular,
@@ -123,6 +125,8 @@ h2.movie-popup-title {
   height: auto;
   text-align: center;
   margin: 0 auto;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .display-comments {
@@ -138,6 +142,7 @@ h2.movie-popup-title {
   color: #fff;
   width: 60%;
   flex-direction: column;
+  margin-top: 75px;
 }
 
 .movie-img {
