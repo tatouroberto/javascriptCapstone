@@ -37,9 +37,6 @@ ul {
   flex-wrap: wrap;
 }
 
-
-
-
 .form-content input,
 .form-content textarea {
   padding: 5px;
@@ -165,9 +162,9 @@ h2.movie-popup-title {
 
 .property-container-1,
 .property-container-2 {
- align-items: flex-start;
- display: flex;
- flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-items {
