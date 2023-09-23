@@ -9,7 +9,7 @@ const home = async (shows) => {
         <div class="desc">
           <p class="movie-title">${item.name}</p>
           <div class="likes">
-            <i class="fa-sharp fa-regular fa-heart" data-id=${item.id}></i>            
+            <i class="fa-solid fa-heart" style="color: #ef3d01;" data-id=${item.id}></i>     
             <p data-id = "${item.id}"> <span class="like-count"></span> likes</p>
           </div>
         </div>
