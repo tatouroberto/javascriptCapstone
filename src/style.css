@@ -1,0 +1,180 @@
+* {
+  font-family: 'roboto', 'mooli', Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+}
+
+.nav,
+footer {
+  display: flex;
+  align-items: center;
+  gap: 40%;
+  border: 1px solid #d3d3d3;
+  padding: 0 2.1rem;
+}
+
+i.fa-solid.fa-film {
+  background-color: transparent !important;
+}
+
+footer {
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.form-content input,
+.form-content textarea {
+  padding: 5px;
+  border-radius: 8px;
+  border: 0.3px solid #000;
+}
+
+.form-content input:hover,
+.form-content textarea:hover {
+  border: 0.5px solid #00968859;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  width: 80px;
+  border: none;
+  background: none;
+  background-color: #02282b;
+  padding: 5px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+li > a {
+  text-decoration: none;
+  color: #0e0202;
+  list-style: none;
+}
+
+li > a:hover {
+  font-size: large;
+}
+
+.fa-clapperboard,
+.fa-heart {
+  padding-right: 10px;
+}
+
+.fa-heart {
+  color: #ef3d01;
+}
+
+.fa-regular,
+.far {
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.movie-icon {
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+p.padd,
+h3.padd.movie-info,
+h4 {
+  color: black;
+  text-align: center;
+}
+
+h2.movie-popup-title {
+  color: black;
+}
+
+.close-icon {
+  color: black;
+  display: block;
+  position: absolute;
+  right: 300px;
+  top: 78px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 50%;
+  width: 20px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.display-comments {
+  color: black;
+}
+
+.popup-display {
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  padding: 0;
+  background-color: #f1f1f1;
+  color: #fff;
+  width: 60%;
+  flex-direction: column;
+}
+
+.movie-img {
+  width: 600px;
+  padding-top: 30px;
+  height: 600px;
+}
+
+.btncomment {
+  margin-bottom: 30px;
+}
+
+.property-container {
+  display: flex;
+  gap: 50px;
+}
+
+.movie-pop-title,
+.movie-info {
+  text-align: center;
+}
+
+.property-container-1,
+.property-container-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-items {
+  padding-left: 30px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  padding-left: 30px;
+}
