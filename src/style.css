@@ -134,6 +134,6 @@ h2.movie-popup-title{
   text-align: center;
   margin: 0 auto;
 }
-div.comments-items{
+.display-comments {
   color: black;
 }
