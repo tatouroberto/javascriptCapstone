@@ -8,6 +8,7 @@ import movieCounter from './modules/countMovies.js';
 
 const showContainer = document.querySelector('.movie-section');
 const popupContainer = document.querySelector('.popup-display');
+const hearder = document.querySelector('.hearder');
 const addEvents = () => {
   const likeIcon = document.querySelectorAll('.fa-heart');
   likeIcon.forEach((element) => {
@@ -38,6 +39,7 @@ window.addEventListener('load', async () => {
         id, image, name, language, genres, rating, schedule,
       } = selectedShow;
       showContainer.style.display = 'none';
+      hearder.style.display = 'none';
       popupContainer.style.display = 'flex';
       renderPopup(id, image, name, language, genres, rating, schedule);
     }
